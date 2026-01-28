@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "export": "node scripts/export-data.js"
+    "export": "node scripts/export-data.js",
+    "publish:data": "powershell -ExecutionPolicy Bypass -File scripts/publish.ps1"
   },
   "dependencies": {
     "cors": "^2.8.5",

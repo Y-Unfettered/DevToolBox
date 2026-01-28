@@ -76,9 +76,9 @@
             <span class="iconify absolute left-3 top-2.5 text-slate-500" data-icon="heroicons:magnifying-glass-20-solid"></span>
             <input id="search-input" class="bg-slate-800 border border-slate-700 text-sm rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all w-64" placeholder="搜索工具名称..." type="text" />
           </div>
-          <button class="bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-2 transition-all border border-slate-600" onclick="exportData()" type="button">
-            <span class="iconify text-lg" data-icon="heroicons:arrow-path-20-solid"></span>
-            <span>生成 JSON</span>
+          <button class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-2 transition-all shadow-lg shadow-emerald-600/20" onclick="publishData()" type="button">
+            <span class="iconify text-lg" data-icon="heroicons:cloud-arrow-up-20-solid"></span>
+            <span>一键发布</span>
           </button>
           <button class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-2 transition-all shadow-lg shadow-indigo-600/20" onclick="openCreateModal()">
             <span class="iconify text-lg" data-icon="heroicons:plus-20-solid"></span>
@@ -400,13 +400,23 @@
       }
     }
 
-    async function exportData() {
+    async function publishData() {
+      const message = window.prompt('提交信息（可选）', 'Update data');
+      if (message === null) return;
       try {
-        const res = await fetch(`${API_BASE}/api/export`, { method: 'POST' });
-        if (!res.ok) throw new Error('Request failed');
-        alert('已生成 data/devtoolbox.json，请提交仓库即可。');
+        const res = await fetch(`${API_BASE}/api/publish`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message })
+        });
+        if (!res.ok) {
+          const errorData = await res.json().catch(() => ({}));
+          alert(errorData.error || '发布失败，请检查后端状态。');
+          return;
+        }
+        alert('已发布到仓库。');
       } catch (err) {
-        alert('导出失败，请检查后端状态。');
+        alert('发布失败，请检查后端状态。');
       }
     }
 

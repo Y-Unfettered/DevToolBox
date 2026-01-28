@@ -7,6 +7,7 @@ const categoriesRouter = require('./routes/categories');
 const statsRouter = require('./routes/stats');
 const settingsRouter = require('./routes/settings');
 const exportRouter = require('./routes/export');
+const publishRouter = require('./routes/publish');
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use('/api/categories', categoriesRouter);
 app.use('/api/stats', statsRouter);
 app.use('/api/settings', settingsRouter);
 app.use('/api/export', exportRouter);
+app.use('/api/publish', publishRouter);
 
 const rootDir = path.join(__dirname, '..');
 const uiDir = path.join(rootDir, 'UI');
