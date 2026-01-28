@@ -23,7 +23,9 @@ app.use('/api/stats', statsRouter);
 app.use('/api/settings', settingsRouter);
 app.use('/api/export', exportRouter);
 
-const uiDir = path.join(__dirname, '..', 'UI');
+const rootDir = path.join(__dirname, '..');
+const uiDir = path.join(rootDir, 'UI');
+app.use(express.static(rootDir));
 app.use(express.static(uiDir));
 
 const port = parseInt(process.env.PORT, 10) || 3000;

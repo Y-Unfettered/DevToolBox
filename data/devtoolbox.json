@@ -1,45 +1,65 @@
 {
-  "generatedAt": "2026-01-28T14:11:14.095Z",
+  "generatedAt": "2026-01-28T15:20:37.724Z",
   "tools": {
     "items": [
       {
-        "id": 3,
-        "title": "测试",
-        "summary": "测试",
-        "icon": null,
-        "category": "休闲娱乐",
-        "url": "https://y-unfettered.github.io/chengdumajiangtishi/",
-        "created_at": "2026-01-28 14:11:10",
-        "updated_at": "2026-01-28 14:11:10"
+        "id": 6,
+        "title": "老照片 AI 修复",
+        "summary": "是一个国外的收费产品，不过效果非常好，个人觉得修复一些有意义的照片还是很值得的",
+        "icon": "https://i.postimg.cc/MTYzMGTW/logo-(6).png",
+        "category": "在线工具",
+        "url": "https://restore-old-photos.com/zh",
+        "created_at": "2026-01-28 15:19:06",
+        "updated_at": "2026-01-28 15:19:06"
+      },
+      {
+        "id": 5,
+        "title": "图床",
+        "summary": "就是能把图片上次到他的服务器上，给我们一个可以访问的URL",
+        "icon": "https://postimgs.org/apple-touch-icon.png",
+        "category": "在线工具",
+        "url": "https://postimages.org/",
+        "created_at": "2026-01-28 15:14:35",
+        "updated_at": "2026-01-28 15:14:35"
+      },
+      {
+        "id": 4,
+        "title": "Mineru PDF识别",
+        "summary": "一个非常帮的 AI OCR 识别图片型 PDF 的在线工具网站",
+        "icon": "https://i.postimg.cc/d1N8YJKb/Mineru1.png",
+        "category": "在线工具",
+        "url": "https://mineru.net/",
+        "created_at": "2026-01-28 15:03:19",
+        "updated_at": "2026-01-28 15:10:53"
       },
       {
         "id": 2,
         "title": "成都麻将听牌提示器",
-        "summary": "在线麻将听牌提示与规则说明。",
-        "icon": null,
+        "summary": "输入 13 张手牌与杠/碰，自动计算当前听哪些牌。帮助成都麻将新手了解是否听牌，不辅助胡牌。",
+        "icon": "https://i.postimg.cc/RCR0qg6f/066ac5bb74ae90f3b23423d5f02a52e8ed991df711e49-EF918V.png",
         "category": "休闲娱乐",
         "url": "https://y-unfettered.github.io/chengdumajiangtishi/",
         "created_at": "2026-01-28 13:48:31",
-        "updated_at": "2026-01-28 13:48:35"
+        "updated_at": "2026-01-28 15:17:02"
       },
       {
         "id": 1,
-        "title": "GitHub",
-        "summary": "测",
-        "icon": null,
-        "category": "前端工具",
-        "url": "https://www.github.com",
+        "title": "GitHub 下载加速网站",
+        "summary": "非常使用，很多时候下载GitHub上的东西都很慢，这个就能完美解决，复制下载链接，粘贴转换获取高速下载链接",
+        "icon": "https://i.postimg.cc/8kqZJm25/github.png",
+        "category": "在线工具",
+        "url": "https://gh-proxy.com/",
         "created_at": "2026-01-28 13:28:55",
-        "updated_at": "2026-01-28 13:28:55"
+        "updated_at": "2026-01-28 15:12:25"
       }
     ],
-    "total": 3
+    "total": 5
   },
   "settings": {
     "items": [
       {
         "key": "contactEmail",
-        "value": ""
+        "value": "934064468@qq.com"
       },
       {
         "key": "footerText",
@@ -47,7 +67,7 @@
       },
       {
         "key": "githubUrl",
-        "value": ""
+        "value": "https://github.com/Y-Unfettered"
       },
       {
         "key": "siteName",
@@ -59,14 +79,14 @@
       },
       {
         "key": "zsxqUrl",
-        "value": ""
+        "value": "https://t.zsxq.com/iWWQU"
       }
     ]
   },
   "categories": {
     "items": [
       "休闲娱乐",
-      "前端工具"
+      "在线工具"
     ]
   }
 }
