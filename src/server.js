@@ -6,6 +6,7 @@ const toolsRouter = require('./routes/tools');
 const categoriesRouter = require('./routes/categories');
 const statsRouter = require('./routes/stats');
 const settingsRouter = require('./routes/settings');
+const exportRouter = require('./routes/export');
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use('/api/tools', toolsRouter);
 app.use('/api/categories', categoriesRouter);
 app.use('/api/stats', statsRouter);
 app.use('/api/settings', settingsRouter);
+app.use('/api/export', exportRouter);
 
 const uiDir = path.join(__dirname, '..', 'UI');
 app.use(express.static(uiDir));

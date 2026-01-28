@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>程序员工具合集 - DevToolBox</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+<style>
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-up {
+      animation: fadeInUp 0.5s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-[#0f172a] text-slate-200 min-h-screen font-sans">
+<!-- 导航栏 -->
+<nav class="sticky top-0 z-50 bg-[#0f172a]/80 backdrop-blur-xl border-b border-slate-800 px-6 py-4">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
+<span class="iconify text-white text-2xl" data-icon="heroicons:command-line"></span>
+</div>
+<div>
+<h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">DevToolBox</h1>
+<p class="text-xs text-slate-500">2026.01.28 | 为开发者而生</p>
+</div>
+</div>
+<div class="relative flex-1 max-w-md">
+<span class="iconify absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" data-icon="heroicons:magnifying-glass"></span>
+<input class="w-full bg-slate-800/50 border border-slate-700 rounded-full py-2.5 pl-11 pr-4 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all text-sm" placeholder="搜索你需要的工具..." type="text"/>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-8">
+<!-- 分类筛选区域 -->
+<section class="mb-10 animate-fade-in-up">
+<div class="flex items-center gap-3 overflow-x-auto pb-4 hide-scrollbar">
+<button class="px-6 py-2 rounded-full bg-indigo-600 text-white text-sm font-medium whitespace-nowrap transition-shadow hover:shadow-lg hover:shadow-indigo-500/30">全部工具</button>
+<button class="px-6 py-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 text-sm font-medium whitespace-nowrap transition-colors">前端开发</button>
+<button class="px-6 py-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 text-sm font-medium whitespace-nowrap transition-colors">后端处理</button>
+<button class="px-6 py-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 text-sm font-medium whitespace-nowrap transition-colors">数据库</button>
+<button class="px-6 py-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 text-sm font-medium whitespace-nowrap transition-colors">网络安全</button>
+<button class="px-6 py-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 text-sm font-medium whitespace-nowrap transition-colors">效能提升</button>
+</div>
+</section>
+<!-- 工具网格 -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- 工具卡片 1 -->
+<div class="group bg-slate-800/40 border border-slate-700 p-6 rounded-2xl hover:bg-slate-800 hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="iconify text-blue-500 text-2xl" data-icon="logos:json"></span>
+</div>
+<span class="bg-indigo-500/10 text-indigo-400 text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider">后端处理</span>
+</div>
+<h3 class="text-lg font-semibold mb-2 group-hover:text-white">JSON 格式化工具</h3>
+<p class="text-sm text-slate-400 leading-relaxed mb-6">在线美化、验证、压缩 JSON 数据，支持多种展示视图和快捷转换。</p>
+</div>
+<button class="w-full bg-slate-700 group-hover:bg-indigo-600 text-white py-2.5 rounded-xl font-medium flex items-center justify-center gap-2 transition-all">
+          立即使用
+          <span class="iconify" data-icon="heroicons:arrow-right"></span>
+</button>
+</div>
+<!-- 工具卡片 2 -->
+<div class="group bg-slate-800/40 border border-slate-700 p-6 rounded-2xl hover:bg-slate-800 hover:border-orange-500/50 transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
+<span class="iconify text-orange-500 text-2xl" data-icon="logos:regexp"></span>
+</div>
+<span class="bg-orange-500/10 text-orange-400 text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider">效能提升</span>
+</div>
+<h3 class="text-lg font-semibold mb-2 group-hover:text-white">正则可视化</h3>
+<p class="text-sm text-slate-400 leading-relaxed mb-6">实时解析正则表达式并生成图形化结构，帮助快速调试复杂匹配规则。</p>
+</div>
+<button class="w-full bg-slate-700 group-hover:bg-orange-600 text-white py-2.5 rounded-xl font-medium flex items-center justify-center gap-2 transition-all">
+          立即使用
+          <span class="iconify" data-icon="heroicons:arrow-right"></span>
+</button>
+</div>
+<!-- 工具卡片 3 -->
+<div class="group bg-slate-800/40 border border-slate-700 p-6 rounded-2xl hover:bg-slate-800 hover:border-emerald-500/50 transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center">
+<span class="iconify text-emerald-500 text-2xl" data-icon="logos:postgresql"></span>
+</div>
+<span class="bg-emerald-500/10 text-emerald-400 text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider">数据库</span>
+</div>
+<h3 class="text-lg font-semibold mb-2 group-hover:text-white">SQL 生成助手</h3>
+<p class="text-sm text-slate-400 leading-relaxed mb-6">可视化构建 SQL 语句，支持 Mock 数据生成及数据库规范验证。</p>
+</div>
+<button class="w-full bg-slate-700 group-hover:bg-emerald-600 text-white py-2.5 rounded-xl font-medium flex items-center justify-center gap-2 transition-all">
+          立即使用
+          <span class="iconify" data-icon="heroicons:arrow-right"></span>
+</button>
+</div>
+<!-- 工具卡片 4 -->
+<div class="group bg-slate-800/40 border border-slate-700 p-6 rounded-2xl hover:bg-slate-800 hover:border-pink-500/50 transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 bg-pink-500/10 rounded-lg flex items-center justify-center">
+<span class="iconify text-pink-500 text-2xl" data-icon="logos:tailwindcss-icon"></span>
+</div>
+<span class="bg-pink-500/10 text-pink-400 text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider">前端开发</span>
+</div>
+<h3 class="text-lg font-semibold mb-2 group-hover:text-white">Tailwind 调色盘</h3>
+<p class="text-sm text-slate-400 leading-relaxed mb-6">快速提取预览 Tailwind 颜色方案，支持自定义阶梯色值生成。</p>
+</div>
+<button class="w-full bg-slate-700 group-hover:bg-pink-600 text-white py-2.5 rounded-xl font-medium flex items-center justify-center gap-2 transition-all">
+          立即使用
+          <span class="iconify" data-icon="heroicons:arrow-right"></span>
+</button>
+</div>
+<!-- 工具卡片 5 -->
+<div class="group bg-slate-800/40 border border-slate-700 p-6 rounded-2xl hover:bg-slate-800 hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center">
+<span class="iconify text-cyan-500 text-2xl" data-icon="logos:jwt-icon"></span>
+</div>
+<span class="bg-cyan-500/10 text-cyan-400 text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider">网络安全</span>
+</div>
+<h3 class="text-lg font-semibold mb-2 group-hover:text-white">JWT 解析器</h3>
+<p class="text-sm text-slate-400 leading-relaxed mb-6">在线解码和验证 JWT 令牌内容，支持多种签名算法检查。</p>
+</div>
+<button class="w-full bg-slate-700 group-hover:bg-cyan-600 text-white py-2.5 rounded-xl font-medium flex items-center justify-center gap-2 transition-all">
+          立即使用
+          <span class="iconify" data-icon="heroicons:arrow-right"></span>
+</button>
+</div>
+<!-- 工具卡片 6 -->
+<div class="group bg-slate-800/40 border border-slate-700 p-6 rounded-2xl hover:bg-slate-800 hover:border-yellow-500/50 transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 bg-yellow-500/10 rounded-lg flex items-center justify-center">
+<span class="iconify text-yellow-500 text-2xl" data-icon="logos:lighthouse"></span>
+</div>
+<span class="bg-yellow-500/10 text-yellow-400 text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider">效能提升</span>
+</div>
+<h3 class="text-lg font-semibold mb-2 group-hover:text-white">性能诊断</h3>
+<p class="text-sm text-slate-400 leading-relaxed mb-6">深度分析网页加载速度，提供核心 Web 指标评估及优化建议。</p>
+</div>
+<button class="w-full bg-slate-700 group-hover:bg-yellow-600 text-white py-2.5 rounded-xl font-medium flex items-center justify-center gap-2 transition-all">
+          立即使用
+          <span class="iconify" data-icon="heroicons:arrow-right"></span>
+</button>
+</div>
+<!-- 下方图片占位 -->
+<div class="sm:col-span-2 lg:col-span-1 xl:col-span-2 bg-slate-800/40 border border-slate-700 p-2 rounded-2xl overflow-hidden min-h-[200px] relative">
+<img alt="DevToolBox Dashboard Preview" class="w-full h-full object-cover rounded-xl opacity-60" id="img-1" src="https://modao.cc/agent-py/media/generated_images/2026-01-28/ae95b891590f4db18ee87976e2c490d9.jpg"/>
+<div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6 bg-gradient-to-t from-slate-900 to-transparent">
+<h4 class="text-lg font-bold mb-2">更多高级工具正在研发中</h4>
+<p class="text-xs text-slate-400">持续更新至 2026 年，敬请期待...</p>
+</div>
+</div>
+</section>
+<!-- 底部统计区域 -->
+<section class="mt-20 border-t border-slate-800 pt-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center">
+<div class="text-3xl font-bold text-white mb-1">150+</div>
+<div class="text-xs text-slate-500 uppercase tracking-widest">在线工具</div>
+</div>
+<div class="text-center">
+<div class="text-3xl font-bold text-white mb-1">2.4M</div>
+<div class="text-xs text-slate-500 uppercase tracking-widest">每月请求</div>
+</div>
+<div class="text-center">
+<div class="text-3xl font-bold text-white mb-1">100%</div>
+<div class="text-xs text-slate-500 uppercase tracking-widest">隐私安全</div>
+</div>
+<div class="text-center">
+<div class="text-3xl font-bold text-white mb-1">开源</div>
+<div class="text-xs text-slate-500 uppercase tracking-widest">Github 社区</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="mt-20 border-t border-slate-800 bg-[#070b14] py-12 px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center">
+<span class="iconify text-slate-400" data-icon="heroicons:code-bracket"></span>
+</div>
+<p class="text-sm text-slate-500">© 2026 DevToolBox Project. All rights reserved.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="iconify text-2xl" data-icon="mdi:github"></span></a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="iconify text-2xl" data-icon="mdi:twitter"></span></a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="iconify text-2xl" data-icon="mdi:email"></span></a>
+</div>
+</div>
+</footer>
+<script>
+    // 简单的搜索交互效果
+    const searchInput = document.querySelector('input');
+    searchInput.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase();
+      const cards = document.querySelectorAll('section.grid > div');
+      
+      cards.forEach(card => {
+        const title = card.querySelector('h3')?.textContent.toLowerCase() || "";
+        const desc = card.querySelector('p')?.textContent.toLowerCase() || "";
+        if (title.includes(term) || desc.includes(term)) {
+          card.style.display = 'flex';
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    // 筛选按钮切换
+    const filterBtns = document.querySelectorAll('section:first-of-type button');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-indigo-600', 'text-white');
+          b.classList.add('bg-slate-800', 'text-slate-300');
+        });
+        btn.classList.remove('bg-slate-800', 'text-slate-300');
+        btn.classList.add('bg-indigo-600', 'text-white');
+      });
+    });
+  </script>
+</body>
+</html>
