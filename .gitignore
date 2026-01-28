@@ -7,3 +7,4 @@ data/*.db
 *.log
 *.zip
 .tmp-check.js
+.tmp-server.*
