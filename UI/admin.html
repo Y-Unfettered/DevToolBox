@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>程序员工具合集 - 后台管理系统</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+  <style>
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade-in { animation: fadeIn 0.3s ease-out forwards; }
+  </style>
+</head>
+<body class="bg-[#0f172a] text-slate-200 font-sans min-h-screen">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-64 bg-[#1e293b] border-r border-slate-700 flex flex-col">
+      <div class="p-6 flex items-center space-x-3">
+        <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center">
+          <span class="iconify text-2xl text-white" data-icon="heroicons:command-line-20-solid"></span>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-white">工具管理后台</span>
+      </div>
+      <nav class="flex-1 mt-4 px-4 space-y-2">
+        <a class="flex items-center space-x-3 bg-indigo-600/10 text-indigo-400 px-4 py-3 rounded-xl border border-indigo-500/20 shadow-lg shadow-indigo-500/5" href="admin.html">
+          <svg class="w-5 h-5 text-current" viewBox="0 0 1024 1024" aria-hidden="true">
+            <path d="M536.508695 515.037173 533.082666 506.909052 528.910647 510.318708Z" fill="currentColor"></path>
+            <path d="M431.339424 549.69553 194.782753 549.69553c-21.871123 0-39.666418 17.796318-39.666418 39.667441l0 236.553601c0 21.87317 17.795295 39.667441 39.666418 39.667441l236.556671 0c21.871123 0 39.665395-17.794271 39.665395-39.667441L471.004819 589.362972C471.004819 567.491849 453.210547 549.69553 431.339424 549.69553zM430.205601 824.780703 195.9176 824.780703 195.9176 590.497818l234.288001 0L430.205601 824.780703z" fill="currentColor"></path>
+            <path d="M192.211185 508.24242l236.557694 0c21.871123 0 39.665395-17.794271 39.665395-39.664372l0-236.557694c0-21.871123-17.794271-39.664372-39.665395-39.664372L192.211185 192.355983c-21.871123 0-39.664372 17.793248-39.664372 39.664372l0 236.557694C152.547837 490.448148 170.340061 508.24242 192.211185 508.24242zM193.349101 233.155201l234.284931 0 0 234.285954L193.349101 467.441155 193.349101 233.155201z" fill="currentColor"></path>
+            <path d="M813.097104 547.127032 576.541457 547.127032c-21.862937 0-39.646975 17.794271-39.646975 39.665395l0 236.555647c0 21.871123 17.784038 39.665395 39.646975 39.665395l236.555647 0c21.881356 0 39.683814-17.794271 39.683814-39.665395L852.780919 586.792427C852.780919 564.921303 834.978461 547.127032 813.097104 547.127032zM811.980677 822.213227 577.69677 822.213227 577.69677 587.927273l234.283908 0L811.980677 822.213227z" fill="currentColor"></path>
+            <path d="M859.52553 314.327942 720.943264 175.745676c-7.087419-7.064906-16.504906-10.956539-26.51591-10.956539-10.008958 0-19.422352 3.891633-26.5374 10.981099L529.377274 314.303382c-7.110955 7.089465-11.026124 16.522302-11.026124 26.561959s3.91517 19.473517 11.000542 26.536376l138.539286 138.559752c7.080256 7.080256 16.501836 10.980076 26.529213 10.980076 10.016121 0 19.436678-3.891633 26.547633-10.980076L859.550089 367.380228C874.147552 352.73774 874.136296 328.939731 859.52553 314.327942zM694.429401 471.41363 563.900555 340.865341 694.429401 210.318076l130.547265 130.547265L694.429401 471.41363z" fill="currentColor"></path>
+            <path d="M432.577624 550.656415 195.628004 550.656415c-21.911032 0-39.737026 17.825994-39.737026 39.739073l0 236.947574c0 21.908986 17.825994 39.730886 39.737026 39.730886l236.94962 0c21.906939 0 39.729863-17.821901 39.729863-39.730886L472.307488 590.395488C472.307488 568.482409 454.484563 550.656415 432.577624 550.656415z" fill="currentColor"></path>
+            <path d="M193.054389 509.131673 429.996846 509.131673c21.911032 0 39.737026-17.823947 39.737026-39.729863L469.733872 232.452189c0-21.905916-17.824971-39.729863-39.737026-39.729863L193.054389 192.722326c-21.911032 0-39.73805 17.823947-39.73805 39.729863l0 236.94962C153.317363 491.307725 171.143357 509.131673 193.054389 509.131673z" fill="currentColor"></path>
+            <path d="M814.956452 548.084846 578.007855 548.084846c-21.894659 0-39.709397 17.825994-39.709397 39.737026l0 236.941434c0 21.911032 17.813714 39.737026 39.709397 39.737026l236.948597 0c21.919219 0 39.752376-17.825994 39.752376-39.737026L854.708827 587.821873C854.707804 565.91084 836.874647 548.084846 814.956452 548.084846z" fill="currentColor"></path>
+            <path d="M861.463672 314.897923 722.654232 176.09667c-7.098675-7.082302-16.533558-10.983145-26.565029-10.983145-10.027377 0-19.461237 3.900843-26.578332 11.002588L530.769994 314.871317c-7.124258 7.099698-11.047614 16.548908-11.047614 26.606984 0 10.060123 3.923356 19.508309 11.019984 26.579355l138.770554 138.79409c7.092535 7.092535 16.529465 10.998495 26.573215 10.998495 10.037611 0 19.472494-3.900843 26.587542-10.998495l138.817626-138.818649C876.107183 353.365027 876.095927 329.529155 861.463672 314.897923zM696.092273 472.244554 565.348534 341.478302l130.744763-130.757043 130.765229 130.757043L696.092273 472.244554z" fill="currentColor"></path>
+            <path d="M537.607726 518.65149 534.18272 510.522346 530.009677 513.932002Z" fill="currentColor"></path>
+          </svg>
+          <span class="font-medium">工具管理</span>
+        </a>
+        <a class="flex items-center space-x-3 text-slate-400 hover:bg-slate-800 hover:text-slate-200 px-4 py-3 rounded-xl transition-all" href="categories.html">
+          <span class="iconify text-xl" data-icon="heroicons:tag-20-solid"></span>
+          <span class="font-medium">分类管理</span>
+        </a>
+        <a class="flex items-center space-x-3 text-slate-400 hover:bg-slate-800 hover:text-slate-200 px-4 py-3 rounded-xl transition-all" href="stats.html">
+          <span class="iconify text-xl" data-icon="heroicons:chart-bar-20-solid"></span>
+          <span class="font-medium">数据统计</span>
+        </a>
+        <a class="flex items-center space-x-3 text-slate-400 hover:bg-slate-800 hover:text-slate-200 px-4 py-3 rounded-xl transition-all" href="settings.html">
+          <span class="iconify text-xl" data-icon="heroicons:cog-6-tooth-20-solid"></span>
+          <span class="font-medium">系统设置</span>
+        </a>
+      </nav>
+      <div class="p-4 border-t border-slate-700">
+        <div class="flex items-center space-x-3 px-4 py-2 hover:bg-slate-800 rounded-xl cursor-pointer">
+          <div class="w-8 h-8 rounded-full border border-slate-600 bg-slate-800 flex items-center justify-center">
+            <span class="iconify text-slate-400" data-icon="heroicons:user-20-solid"></span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-sm font-medium text-white truncate">Admin User</p>
+            <p class="text-xs text-slate-500 truncate">2026-01-28</p>
+          </div>
+          <span class="iconify text-slate-500" data-icon="heroicons:arrow-right-on-rectangle-20-solid"></span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <header class="h-16 bg-[#1e293b]/50 backdrop-blur-md border-b border-slate-700 flex items-center justify-between px-8">
+        <div class="flex items-center space-x-4">
+          <h2 class="text-lg font-semibold text-white">工具列表</h2>
+          <span id="total-badge" class="text-xs bg-slate-700 text-slate-400 px-2 py-1 rounded">共 0 项</span>
+        </div>
+        <div class="flex items-center space-x-4">
+          <div class="relative">
+            <span class="iconify absolute left-3 top-2.5 text-slate-500" data-icon="heroicons:magnifying-glass-20-solid"></span>
+            <input id="search-input" class="bg-slate-800 border border-slate-700 text-sm rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all w-64" placeholder="搜索工具名称..." type="text" />
+          </div>
+          <button class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-2 transition-all shadow-lg shadow-indigo-600/20" onclick="openCreateModal()">
+            <span class="iconify text-lg" data-icon="heroicons:plus-20-solid"></span>
+            <span>添加工具</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="flex-1 overflow-auto p-8 hide-scrollbar">
+        <div class="bg-[#1e293b] rounded-2xl border border-slate-700 shadow-xl overflow-hidden">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-slate-800/50 border-b border-slate-700">
+                <th class="px-6 py-4 text-xs font-semibold text-slate-400 uppercase tracking-wider">图标</th>
+                <th class="px-6 py-4 text-xs font-semibold text-slate-400 uppercase tracking-wider">工具标题</th>
+                <th class="px-6 py-4 text-xs font-semibold text-slate-400 uppercase tracking-wider">摘要描述</th>
+                <th class="px-6 py-4 text-xs font-semibold text-slate-400 uppercase tracking-wider">分类</th>
+                <th class="px-6 py-4 text-xs font-semibold text-slate-400 uppercase tracking-wider">网址</th>
+                <th class="px-6 py-4 text-xs font-semibold text-slate-400 uppercase tracking-wider text-right">操作</th>
+              </tr>
+            </thead>
+            <tbody id="tools-body" class="divide-y divide-slate-700/50"></tbody>
+          </table>
+          <div id="empty-row" class="px-6 py-10 text-center text-slate-400 hidden">暂无工具，请先添加。</div>
+
+          <div class="px-6 py-4 border-t border-slate-700 flex items-center justify-between">
+            <p class="text-sm text-slate-500" id="page-info">显示 0 到 0 项，共 0 项</p>
+            <div class="flex items-center space-x-2">
+              <button id="prev-page" class="p-2 bg-slate-800 border border-slate-700 rounded-lg hover:bg-slate-700 transition-colors disabled:opacity-50" disabled>
+                <span class="iconify" data-icon="heroicons:chevron-left-20-solid"></span>
+              </button>
+              <span class="text-sm font-medium px-2" id="page-number">1</span>
+              <button id="next-page" class="p-2 bg-slate-800 border border-slate-700 rounded-lg hover:bg-slate-700 transition-colors disabled:opacity-50" disabled>
+                <span class="iconify" data-icon="heroicons:chevron-right-20-solid"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="fixed inset-0 z-50 hidden bg-black/60 flex items-center justify-center backdrop-blur-sm" id="toolModal">
+    <div class="bg-[#1e293b] w-full max-w-lg rounded-2xl border border-slate-700 shadow-2xl animate-fade-in">
+      <div class="px-6 py-4 border-b border-slate-700 flex items-center justify-between">
+        <h3 class="text-lg font-bold text-white" id="modalTitle">添加新工具</h3>
+        <button class="text-slate-400 hover:text-white transition-colors" onclick="toggleModal('toolModal')">
+          <span class="iconify text-2xl" data-icon="heroicons:x-mark-20-solid"></span>
+        </button>
+      </div>
+      <form class="p-6 space-y-4" onsubmit="handleSubmit(event)">
+        <div>
+          <label class="block text-sm font-medium text-slate-400 mb-1">工具标题</label>
+          <input class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-white" id="toolTitle" placeholder="例如：GitHub" required type="text" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-400 mb-1">摘要描述</label>
+          <textarea class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-white" id="toolSummary" placeholder="简短介绍工具用途..." rows="2" required></textarea>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-slate-400 mb-1">Icon URL / Iconify 名称</label>
+            <input class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-white" id="toolIcon" placeholder="https://... 或 logos:json" type="text" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-400 mb-1">分类</label>
+            <select class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-white appearance-none" id="toolCategory" required></select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-400 mb-1">访问网址</label>
+          <input class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-white" id="toolUrl" placeholder="https://..." required type="url" />
+        </div>
+        <div class="pt-4 flex items-center justify-end space-x-3">
+          <button class="px-6 py-2.5 text-slate-300 hover:text-white font-medium" onclick="toggleModal('toolModal')" type="button">取消</button>
+          <button class="bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-2.5 rounded-xl font-bold transition-all shadow-lg shadow-indigo-600/20" type="submit">保存提交</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="fixed inset-0 z-50 hidden bg-black/60 flex items-center justify-center backdrop-blur-sm" id="deleteConfirmModal">
+    <div class="bg-[#1e293b] w-full max-w-sm rounded-2xl border border-slate-700 shadow-2xl p-6 text-center animate-fade-in">
+      <div class="w-16 h-16 bg-rose-500/10 text-rose-500 rounded-full flex items-center justify-center mx-auto mb-4">
+        <span class="iconify text-3xl" data-icon="heroicons:exclamation-triangle-20-solid"></span>
+      </div>
+      <h3 class="text-xl font-bold text-white mb-2">确认删除？</h3>
+      <p class="text-slate-400 text-sm mb-6">您确定要删除 <span class="text-slate-200 font-bold" id="deleteItemName"></span> 吗？此操作不可撤销。</p>
+      <div class="flex items-center justify-center space-x-3">
+        <button class="flex-1 px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white rounded-xl transition-colors" onclick="toggleModal('deleteConfirmModal')">取消</button>
+        <button class="flex-1 px-4 py-2.5 bg-rose-600 hover:bg-rose-500 text-white rounded-xl transition-colors font-bold" onclick="executeDelete()">立即删除</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API_BASE = '';
+    const limit = 10;
+    const state = { q: '', offset: 0, total: 0, editingId: null, deleteId: null, deleteName: '' };
+    let categoriesCache = [];
+
+    const toolsBody = document.getElementById('tools-body');
+    const totalBadge = document.getElementById('total-badge');
+    const pageInfo = document.getElementById('page-info');
+    const pageNumber = document.getElementById('page-number');
+    const prevPage = document.getElementById('prev-page');
+    const nextPage = document.getElementById('next-page');
+    const emptyRow = document.getElementById('empty-row');
+
+    function toggleModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.toggle('hidden');
+    }
+
+    function isUrl(value) {
+      if (!value) return false;
+      try { new URL(value); return true; } catch { return false; }
+    }
+
+    function normalizeUrl(value) {
+      const trimmed = (value || '').trim();
+      if (!trimmed) return '';
+      if (/^https?:\/\//i.test(trimmed)) return trimmed;
+      return `https://${trimmed}`;
+    }
+
+    function badgeClass(category) {
+      const key = (category || '').toLowerCase();
+      if (key.includes('前端') || key.includes('frontend')) return 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20';
+      if (key.includes('后端') || key.includes('backend')) return 'bg-amber-500/10 text-amber-400 border-amber-500/20';
+      if (key.includes('运维') || key.includes('ops')) return 'bg-blue-500/10 text-blue-400 border-blue-500/20';
+      return 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20';
+    }
+
+    function renderRows(items) {
+      toolsBody.innerHTML = '';
+      if (!items.length) {
+        emptyRow.classList.remove('hidden');
+        return;
+      }
+      emptyRow.classList.add('hidden');
+
+      items.forEach((tool) => {
+        const iconMarkup = isUrl(tool.icon)
+          ? `<img alt="tool icon" class="w-6 h-6 object-contain" src="${tool.icon}" />`
+          : `<span class="iconify text-xl text-slate-300" data-icon="${tool.icon || 'heroicons:command-line-20-solid'}"></span>`;
+
+        const row = document.createElement('tr');
+        row.className = 'hover:bg-slate-800/30 transition-colors group';
+        row.innerHTML = `
+          <td class="px-6 py-4">
+            <div class="w-10 h-10 bg-slate-700 rounded-lg flex items-center justify-center border border-slate-600 overflow-hidden">
+              ${iconMarkup}
+            </div>
+          </td>
+          <td class="px-6 py-4 font-medium text-white">${tool.title}</td>
+          <td class="px-6 py-4 text-sm text-slate-400 max-w-xs truncate">${tool.summary}</td>
+          <td class="px-6 py-4">
+            <span class="px-2 py-1 border text-xs rounded-full ${badgeClass(tool.category)}">${tool.category}</span>
+          </td>
+          <td class="px-6 py-4 text-sm text-indigo-400 hover:text-indigo-300">
+            <a class="flex items-center space-x-1" href="${tool.url}" target="_blank" rel="noopener noreferrer">
+              <span>${tool.url.replace(/^https?:\/\//, '')}</span>
+              <span class="iconify" data-icon="heroicons:arrow-top-right-on-square-20-solid"></span>
+            </a>
+          </td>
+          <td class="px-6 py-4 text-right space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+            <button class="p-2 text-slate-400 hover:text-indigo-400 transition-colors" data-action="edit" data-id="${tool.id}">
+              <span class="iconify text-lg" data-icon="heroicons:pencil-square-20-solid"></span>
+            </button>
+            <button class="p-2 text-slate-400 hover:text-rose-400 transition-colors" data-action="delete" data-id="${tool.id}" data-name="${tool.title}">
+              <span class="iconify text-lg" data-icon="heroicons:trash-20-solid"></span>
+            </button>
+          </td>
+        `;
+        toolsBody.appendChild(row);
+      });
+    }
+
+    function updatePagination() {
+      const start = state.total === 0 ? 0 : state.offset + 1;
+      const end = Math.min(state.offset + limit, state.total);
+      pageInfo.textContent = `显示 ${start} 到 ${end} 项，共 ${state.total} 项`;
+      pageNumber.textContent = String(Math.floor(state.offset / limit) + 1);
+      prevPage.disabled = state.offset === 0;
+      nextPage.disabled = state.offset + limit >= state.total;
+    }
+
+    async function loadTools() {
+      const params = new URLSearchParams({ limit: String(limit), offset: String(state.offset) });
+      if (state.q) params.set('q', state.q);
+
+      try {
+        const res = await fetch(`${API_BASE}/api/tools?${params.toString()}`);
+        if (!res.ok) throw new Error('Request failed');
+        const data = await res.json();
+        state.total = data.total || 0;
+        totalBadge.textContent = `共 ${state.total} 项`;
+        renderRows(data.items || []);
+        updatePagination();
+      } catch (err) {
+        toolsBody.innerHTML = '';
+        emptyRow.textContent = '加载失败，请确认后端已启动。';
+        emptyRow.classList.remove('hidden');
+      }
+    }
+
+    function renderCategoryOptions(selected) {
+      const select = document.getElementById('toolCategory');
+      select.innerHTML = '';
+      const placeholder = document.createElement('option');
+      placeholder.value = '';
+      placeholder.textContent = '请选择分类';
+      placeholder.disabled = true;
+      placeholder.selected = !selected;
+      select.appendChild(placeholder);
+
+      categoriesCache.forEach((cat) => {
+        const option = document.createElement('option');
+        option.value = cat.name;
+        option.textContent = cat.name;
+        if (selected && cat.name === selected) option.selected = true;
+        select.appendChild(option);
+      });
+    }
+
+    async function loadCategories() {
+      try {
+        const res = await fetch(`${API_BASE}/api/categories`);
+        if (!res.ok) throw new Error('Request failed');
+        const data = await res.json();
+        categoriesCache = data.items || [];
+      } catch (err) {
+        categoriesCache = [];
+      }
+    }
+
+    function openCreateModal() {
+      state.editingId = null;
+      document.getElementById('modalTitle').textContent = '添加新工具';
+      document.getElementById('toolTitle').value = '';
+      document.getElementById('toolSummary').value = '';
+      document.getElementById('toolIcon').value = '';
+      renderCategoryOptions('');
+      document.getElementById('toolUrl').value = '';
+      toggleModal('toolModal');
+    }
+
+    async function openEditModal(id) {
+      try {
+        const res = await fetch(`${API_BASE}/api/tools/${id}`);
+        if (!res.ok) throw new Error('Request failed');
+        const tool = await res.json();
+        state.editingId = tool.id;
+        document.getElementById('modalTitle').textContent = '编辑工具';
+        document.getElementById('toolTitle').value = tool.title || '';
+        document.getElementById('toolSummary').value = tool.summary || '';
+        document.getElementById('toolIcon').value = tool.icon || '';
+        renderCategoryOptions(tool.category || '');
+        document.getElementById('toolUrl').value = tool.url || '';
+        toggleModal('toolModal');
+      } catch (err) {
+        alert('加载详情失败，请稍后重试。');
+      }
+    }
+
+    async function handleSubmit(e) {
+      e.preventDefault();
+      const rawUrl = document.getElementById('toolUrl').value;
+      const iconValue = document.getElementById('toolIcon').value.trim();
+      const payload = {
+        title: document.getElementById('toolTitle').value.trim(),
+        summary: document.getElementById('toolSummary').value.trim(),
+        icon: iconValue || null,
+        category: document.getElementById('toolCategory').value.trim(),
+        url: normalizeUrl(rawUrl)
+      };
+
+      try {
+        const method = state.editingId ? 'PUT' : 'POST';
+        const url = state.editingId ? `${API_BASE}/api/tools/${state.editingId}` : `${API_BASE}/api/tools`;
+        const res = await fetch(url, {
+          method,
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (!res.ok) {
+          const errorData = await res.json().catch(() => ({}));
+          const detail = Array.isArray(errorData.details) ? errorData.details.join('\n') : '';
+          alert(detail || errorData.error || '保存失败');
+          return;
+        }
+        toggleModal('toolModal');
+        await loadTools();
+      } catch (err) {
+        alert('保存失败，请检查后端状态。');
+      }
+    }
+
+    function confirmDelete(id, name) {
+      state.deleteId = id;
+      state.deleteName = name;
+      document.getElementById('deleteItemName').textContent = name;
+      toggleModal('deleteConfirmModal');
+    }
+
+    async function executeDelete() {
+      if (!state.deleteId) return;
+      try {
+        const res = await fetch(`${API_BASE}/api/tools/${state.deleteId}`, { method: 'DELETE' });
+        if (!res.ok) throw new Error('Request failed');
+        toggleModal('deleteConfirmModal');
+        await loadTools();
+      } catch (err) {
+        alert('删除失败，请检查后端状态。');
+      } finally {
+        state.deleteId = null;
+        state.deleteName = '';
+      }
+    }
+
+    document.getElementById('search-input').addEventListener('input', (e) => {
+      state.q = e.target.value.trim();
+      state.offset = 0;
+      loadTools();
+    });
+
+    prevPage.addEventListener('click', () => {
+      if (state.offset === 0) return;
+      state.offset = Math.max(0, state.offset - limit);
+      loadTools();
+    });
+
+    nextPage.addEventListener('click', () => {
+      if (state.offset + limit >= state.total) return;
+      state.offset += limit;
+      loadTools();
+    });
+
+    toolsBody.addEventListener('click', (e) => {
+      const button = e.target.closest('button');
+      if (!button) return;
+      const action = button.dataset.action;
+      const id = button.dataset.id;
+      const name = button.dataset.name;
+      if (action === 'edit') {
+        openEditModal(id);
+      }
+      if (action === 'delete') {
+        confirmDelete(id, name);
+      }
+    });
+
+    loadCategories().then(loadTools);
+  </script>
+</body>
+</html>
