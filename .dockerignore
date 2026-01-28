@@ -1,0 +1,8 @@
+node_modules
+.git
+.node20
+data
+*.zip
+*.log
+README.md
+.tmp-check.js
