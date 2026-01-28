@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-01-28T15:52:08.201Z",
+  "generatedAt": "2026-01-28T15:55:48.773Z",
   "tools": {
     "items": [
       {
         "id": 7,
         "title": "花瓣网",
         "summary": "一个素材非常丰富的网站，用于设计找灵感非常合适，不过要注意上面的很多素材不能直接使用，有侵权风险！",
-        "icon": "https://grocery-cdn.huaban.com/file/hb_logo.svg",
+        "icon": "https://i.postimg.cc/MpdPTM18/huaban.png",
         "category": "实用网站",
         "url": "https://huaban.com/discovery",
         "created_at": "2026-01-28 15:51:38",
-        "updated_at": "2026-01-28 15:51:57"
+        "updated_at": "2026-01-28 15:55:30"
       },
       {
         "id": 6,
