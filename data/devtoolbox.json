@@ -1,7 +1,17 @@
 {
-  "generatedAt": "2026-01-28T15:49:18.585Z",
+  "generatedAt": "2026-01-28T15:52:08.201Z",
   "tools": {
     "items": [
+      {
+        "id": 7,
+        "title": "花瓣网",
+        "summary": "一个素材非常丰富的网站，用于设计找灵感非常合适，不过要注意上面的很多素材不能直接使用，有侵权风险！",
+        "icon": "https://grocery-cdn.huaban.com/file/hb_logo.svg",
+        "category": "实用网站",
+        "url": "https://huaban.com/discovery",
+        "created_at": "2026-01-28 15:51:38",
+        "updated_at": "2026-01-28 15:51:57"
+      },
       {
         "id": 6,
         "title": "老照片 AI 修复",
@@ -53,7 +63,7 @@
         "updated_at": "2026-01-28 15:12:25"
       }
     ],
-    "total": 5
+    "total": 6
   },
   "settings": {
     "items": [
@@ -86,7 +96,8 @@
   "categories": {
     "items": [
       "休闲娱乐",
-      "在线工具"
+      "在线工具",
+      "实用网站"
     ]
   }
 }
